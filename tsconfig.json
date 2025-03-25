@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+      "target": "ES5",
+      "lib": ["dom", "dom.iterable", "esnext"],
+      "esModuleInterop": true,
+      "strict": true,
+      "forceConsistentCasingInFileNames": true,
+      "module": "esnext",
+      "moduleResolution": "node",
+      "isolatedModules": true,
+      "jsx": "react-jsx",
+      "noImplicitAny": true,
+      "baseUrl": "."
+    },
+    "include": ["src"]
+  }
