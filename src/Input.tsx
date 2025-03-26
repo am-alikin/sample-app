@@ -3,7 +3,8 @@ export function Input() {
         <div>a:<input /></div>
         <div>b:<input /></div>
         <div>
-            <select>
+            action:<select>
+                <option>None</option>
                 <option>+</option>
                 <option>-</option>
                 <option>*</option>
