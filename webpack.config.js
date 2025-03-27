@@ -3,6 +3,7 @@ const path = require('path');
 
 module.exports = {
     entry: './src/index',
+    devtool:"source-map",
     module: {
         rules: [
             {
@@ -23,7 +24,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: 'our project',
             template: 'src/index.html'
-        })
+        }),
     ],
     devServer: {
         static: path.join(__dirname, "dist"),
