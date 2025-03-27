@@ -15,9 +15,6 @@ export const requestReducer = createReducer(initialState, (builder) => {
     builder.addMatcher(matcher, (state, action) => {
         state[action.meta.requestId] = action.meta.requestStatus
     })
-    builder.addDefaultCase((_, action) => {
-        throw `Incorrect action '${action.type}' in requestReducer`
-    })
 })
 
 function matcher(action: UnknownAction): action is (Pending | Fulfilled | Rejected) {

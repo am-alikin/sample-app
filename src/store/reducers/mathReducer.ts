@@ -1,20 +1,26 @@
-import { createReducer } from "@reduxjs/toolkit";
-import { setOperationAction } from "../actions/math/setOperationAction";
-import { setValue1Action } from "../actions/math/setValue1Action";
-import { setValue2Action } from "../actions/math/setValue2Action";
+import { createSlice } from "@reduxjs/toolkit"
+import { setValue1Action, setValue2Action, setOperationAction } from "../actions/math"
 
 
-export const mathReducer = createReducer({ a: 0, b: 0, operation: "" }, (builder) => {
-    builder.addCase(setValue1Action, (state, action) => {
-        state.a = action.payload
-    })
-    builder.addCase(setValue2Action, (state, action) => {
-        state.b = action.payload
-    })
-    builder.addCase(setOperationAction, (state, action) => {
-        state.operation = action.payload
-    })
-    builder.addDefaultCase((_, action) => {
-        throw `Incorrect action '${action.type}' in mathReducer`
-    })
+const initialState = {
+    value1: "0",
+    value2: "0",
+    operation: "+"
+}
+
+export const mathSlice = createSlice({
+    name: "math",
+    initialState,
+    reducers: {},
+    extraReducers: (builder) => {
+        builder.addCase(setValue1Action, (state, action) => {
+            state.value1 = action.payload
+        })
+        builder.addCase(setValue2Action, (state, action) => {
+            state.value2 = action.payload
+        })
+        builder.addCase(setOperationAction, (state, action) => {
+            state.operation = action.payload
+        })
+    },
 })

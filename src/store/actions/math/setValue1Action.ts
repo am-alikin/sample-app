@@ -1,3 +1,3 @@
 import { createAction } from "@reduxjs/toolkit";
 
-export const setValue1Action = createAction<number>('math/a')
+export const setValue1Action = createAction<string>('math/value1')
