@@ -1,9 +1,8 @@
-import { Input } from './Input';
-import { Output } from './Output';
+import { Weather } from "./modules/weather";
+
 
 export function App() {
     return <>
-        <div><Input /></div>
-        <div><Output /></div>
+        <Weather />
     </>
 }
